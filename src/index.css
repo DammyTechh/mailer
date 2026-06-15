@@ -1,0 +1,46 @@
+:root {
+  --navy: #0b2c5c;
+  --blue: #1351d8;
+  --blue-soft: #e8f0fe;
+  --ink: #1a2333;
+  --slate: #5b6b85;
+  --paper: #ffffff;
+  --paper-shade: #f5f7fb;
+  --border: #dde4f0;
+  --success: #1a8a5a;
+  --error: #c0392b;
+
+  --font-display: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  font-family: var(--font-body);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--paper-shade);
+  color: var(--ink);
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--blue-soft);
+}
