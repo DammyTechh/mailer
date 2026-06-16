@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Send the form's POST /api/send-email to the serverless function.
+# status = 200 makes it a rewrite (proxy), so the URL stays /api/send-email.
+[[redirects]]
+  from = "/api/send-email"
+  to = "/.netlify/functions/send-email"
+  status = 200
+
+# SPA fallback — every other path serves the React app.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
